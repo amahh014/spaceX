@@ -5,15 +5,21 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodomon server.js"
+    "server": "nodomon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Nizam Mamedov",
   "license": "MIT",
   "dependencies": {
+    "@babel/runtime": "^7.6.2",
     "axios": "^0.19.0",
+    "concurrently": "^4.1.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
-    "graphql": "^14.5.8"
+    "graphql": "^14.5.8",
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.3"
